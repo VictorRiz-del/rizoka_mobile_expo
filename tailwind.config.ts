@@ -29,6 +29,7 @@ module.exports = {
         lightGrey: '#BDBDBD',
         orange:"#E78382",
         pink:"#F77275",
+        tomato: "#FFCCCC",
         dark:{
 
         }

@@ -15,6 +15,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import PrimaryButton from "@/components/PrimaryButton";
 import Animated, { FadeInDown, FadeInUp } from "react-native-reanimated";
 import { router } from "expo-router";
+import SemiBoldText from "@/components/Utils/SemiBoldText";
 export default function index() {
   const [image, setImage] = useState(OnboardingImg1);
 
@@ -34,7 +35,10 @@ export default function index() {
         className="flex-1"
       >
         <SafeAreaView className="p-5 flex-1">
-          <Animated.View entering={FadeInUp.duration(300).delay(300)} className="gap-3">
+          <Animated.View
+            entering={FadeInUp.duration(300).delay(300)}
+            className="gap-3"
+          >
             <BoldText className="font-black text-2xl text-center text-white">
               Welcome to Rizoka
             </BoldText>
@@ -48,7 +52,7 @@ export default function index() {
           </Animated.View>
           <Animated.View
             entering={FadeInDown.delay(600).duration(300)}
-            className="gap-4 mt-auto"
+            className="gap-1 mt-auto"
           >
             <PrimaryButton
               text="Create an account"
@@ -56,12 +60,15 @@ export default function index() {
               textClassName="text-white text-center font-semibold text-lg"
               onPress={() => router.push("/register")}
             />
-            <PrimaryButton
-              text="Sign In"
-              className="p-5 bg-white rounded-md"
-              textClassName="text-black text-center font-semibold text-lg"
-              onPress={() => router.push("/login")}
-            />
+            <View className="flex-row items-center justify-center">
+              <SemiBoldText className="text-lg text-white">Have an account? </SemiBoldText>
+              <PrimaryButton
+                text="Sign In"
+                className="rounded-md"
+                textClassName="text-white underline text-center font-semibold text-lg"
+                onPress={() => router.push("/login")}
+              />
+            </View>
           </Animated.View>
         </SafeAreaView>
       </LinearGradient>
