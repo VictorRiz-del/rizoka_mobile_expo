@@ -11,7 +11,7 @@ import { router } from "expo-router";
 export default function Index() {
   useEffect(() => {
     setTimeout(() => {
-      router.replace("/(auth)");
+      router.replace("/(home)");
     }, 5000);
   }, []);
 
