@@ -30,6 +30,7 @@ export default function TabLayout() {
               <Feather name="home" size={24} color={color} />
             </TouchableOpacity>
           ),
+          
         }}
       />
       <Tabs.Screen
